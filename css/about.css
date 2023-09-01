@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* about section */
+.about{
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.about .details h2{
+    font-size: 2.2rem;
+    width: 80%;
+}
+.about .details p{
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.about .details button{
+    width: 100px !important;
+}
+.about .about_image>img{
+    width: 100%;
+    height: 100%;
+}
+
+/* recipes */
+.awesomesouce{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.awesomesouce>.recipe_items{
+    margin-top: 20px;
+}
+.awesomesouce> p{
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 10px 0 0 20px
+}
+
+/* Media queries for responsive */
+@media (max-width: 480px){
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about .details h2{
+        width: 100%;
+    }
+    .details{
+        margin-bottom: 20px;
+    }
+}

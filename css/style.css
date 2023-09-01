@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header styling */
+header{
+    padding: 1rem 0 2rem 0;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    align-content: center;
+    align-items: center;
+}
+/* navbar logo */
+nav>h2{
+    color: blueviolet;
+    text-align: center;
+}
+nav>h2>span{
+    color: #000;
+}
+/* navbar navlink */
+nav>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+nav>ul>li{
+    list-style-type: none;
+    justify-content: space-between;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+}
+nav>ul>li>a:hover, :focus{
+    color: blueviolet;
+}
+nav>ul>li>a:active{
+    color: blueviolet;
+}
+
+/* contact button */
+.contact_btn{
+    width: 40%;
+    text-decoration: none;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    padding: .5em 0.5em;
+    border-style: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 0 auto;
+
+}
+
+/* Banner styling */
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    height: 400px;
+    background-image: url(../assets/hero-home-bd.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    position: relative;
+    
+}
+.banner::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .4;
+    position: absolute;
+}
+.banner>h1{
+    font-size: 4rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+.banner>p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Categories Recipe */
+.recipes{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    margin: 40px auto;
+}
+/* categories links */
+.categories{
+    
+}
+.categories>h3{
+    font-size: 1.5rem;
+}
+.categories>ul{
+    margin-top: 20px;
+}
+.categories>ul>li{
+    list-style: none;
+    margin-top: 5px;
+}
+.categories ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+
+}
+/* recipe items */
+.recipe_items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+}
+.recipe_items .item1{
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+.recipe_items .item1 img{
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+}
+.recipe_items .item1 h3{
+    margin-top: 10px;
+}
+.recipe_items .item1 p{
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 400px;
+}
+
+/* footer styling */
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .project_name{
+    color: blueviolet;
+}
+footer .developer_name{
+    color: blueviolet;
+}
+
+/* Media Queries for responsive */
+@media (max-width: 480px){
+    /* header resposive */
+    .navbar{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    nav>h2{
+        text-align: left;
+    }
+    nav>ul{
+        flex-direction: column;
+        margin: 20px 0px;
+        gap: 0;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    nav ul li{
+        width: 100%;
+        padding: 15px 0;
+        border-top: 1px solid rgb(212, 212, 212);
+        border-bottom: 1px solid rgb(212, 212, 212);
+        text-align: center;
+    }
+    nav>.contact_btn{
+        display: block;
+        margin: 0 auto;
+    }
+    /* home page recipes responsive */
+    .recipes{
+        grid-template-columns: 1fr;
+
+    }
+    .recipe_items{
+        grid-template-columns: 1fr;
+    }
+
+}
